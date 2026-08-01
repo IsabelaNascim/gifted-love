@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { Check, Copy } from "lucide-react";
+import { Check, Copy, QrCode } from "lucide-react";
 
 interface GiftCardProps {
   image: string;
   title: string;
   pixCode: string;
+  qrCode?: string;
 }
 
-const GiftCard = ({ image, title, pixCode }: GiftCardProps) => {
+const GiftCard = ({ image, title, pixCode, qrCode }: GiftCardProps) => {
   const [flipped, setFlipped] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -33,7 +34,7 @@ const GiftCard = ({ image, title, pixCode }: GiftCardProps) => {
   return (
     <div
       className="flip-card cursor-pointer w-full"
-      style={{ height: "380px" }}
+      style={{ height: "400px" }}
       onClick={() => setFlipped(!flipped)}
     >
       <div className={`flip-card-inner ${flipped ? "flipped" : ""}`}>
@@ -46,7 +47,7 @@ const GiftCard = ({ image, title, pixCode }: GiftCardProps) => {
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />
           </div>
-          <div className="p-4 text-center">
+          <div className="p-4 text-center" style={{ height: "140px" }}>
             <p className="font-display text-lg text-card-foreground">{title}</p>
             <p className="text-xs text-muted-foreground mt-1 font-body">
               Toque para ver o PIX
@@ -59,18 +60,7 @@ const GiftCard = ({ image, title, pixCode }: GiftCardProps) => {
           {/* QR Code placeholder */}
           <div className="w-32 h-32 bg-muted rounded-lg flex items-center justify-center mb-4 border border-border">
             <div className="text-center">
-              <div className="grid grid-cols-5 gap-0.5 w-20 h-20 mx-auto">
-                {Array.from({ length: 25 }).map((_, i) => (
-                  <div
-                    key={i}
-                    className={`w-full aspect-square ${
-                      [0,1,2,4,5,6,8,10,12,14,16,18,19,20,22,23,24].includes(i)
-                        ? "bg-foreground"
-                        : "bg-card"
-                    }`}
-                  />
-                ))}
-              </div>
+              <img src={qrCode} alt="QR Code" className="grid grid-cols-5 gap-0.5 w-20 h-20 mx-auto" />
             </div>
           </div>
 

@@ -154,3 +154,7 @@
   animation-delay: 0.4s;
   opacity: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,6 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import GiftGrid from "@/components/GiftGrid";
-import MessageCard from "@/components/MessageCard";
+import GuestBook from "@/components/GuestBook";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -8,7 +8,7 @@ const Index = () => {
     <main className="min-h-screen">
       <HeroSection />
       <GiftGrid />
-      <MessageCard />
+      <GuestBook />
       <Footer />
     </main>
   );
