@@ -3,6 +3,7 @@ import { Send } from "lucide-react";
 import { createMessage } from "@/services/message.service";
 import { Message } from "@/types/Message";
 import flores from "@/assets/flores.png";
+import textura from "@/assets/Textura.png";
 interface MessageCardProps {
   onMessageCreated: (message: Message) => void;
 }
@@ -41,7 +42,9 @@ const MessageCard = ({
   };
 
   return (
-    <section className="px-6 border-t border-border" style={{ paddingTop: 0, paddingBottom: "5rem", }}>
+    <section className="px-6 border-t border-border" 
+      style={{ backgroundImage: `url(${textura})`, backgroundSize: "cover", backgroundRepeat: "repeat", paddingTop: 0, paddingBottom: "5rem", }}
+    >
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-14">
           {/* Monograma */}

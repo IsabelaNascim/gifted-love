@@ -1,5 +1,5 @@
 import { Message } from "@/types/Message";
-import textura from "@/assets/textura.png";
+import textura from "@/assets/Textura.png";
 import flor from "@/assets/flor.png";
 import moldSupEsq from "@/assets/mold_sup_esq.png";
 import moldSupDir from "@/assets/mold_sup_dir.png";
