@@ -35,7 +35,7 @@ const gifts = [
   },
   {
     image: img1_80,
-    title: "Ajude-nos a comprar passeios legais e tiramos várias fotos boas, afinal, ''Cada mergulho é um flash!'' (R$80)",
+    title: "Ajude-nos a comprar passeios legais e tirarmos várias fotos boas, afinal, ''Cada mergulho é um flash!'' (R$80)",
     pixCode: "00020126810014br.gov.bcb.pix013671b44f98-9a8c-48a2-ac16-a855253207e30219Presente Isa e Vini520400005303986540580.005802BR5924ISABELA PAULO NASCIMENTO6009GUARULHOS622905255TyZZEBcOSu4mtJNpnrbeb28W6304D83C",
     qrCode: pix1_80,
   },
